@@ -28,6 +28,7 @@ build/Release
 
 # Dependency directories
 imperative/node_modules
+reactive/node_modules
 jspm_packages
 
 # Optional npm cache directory
