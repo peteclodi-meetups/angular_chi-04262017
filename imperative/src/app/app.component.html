@@ -1,0 +1,25 @@
+<md-toolbar color="primary">
+    <h1>{{title}}</h1>
+</md-toolbar>
+
+<form>
+    <md-input-container>
+        <input type="number" name="value1Input" mdInput [(ngModel)]="value1">
+    </md-input-container>
+    <md-input-container>
+        <input type="number" name="value2Input" mdInput [(ngModel)]="value2">
+    </md-input-container>
+
+    <md-select [(ngModel)]="selectedCalculation" selected="selectedCalculation" name="calculationSelect">
+        <md-option *ngFor="let calculation of calculations" [value]="calculation">
+            {{calculation.operator}}
+        </md-option>
+    </md-select>
+
+    <hr>
+
+    <div class="result">{{result}}</div>
+    <button md-raised-button (click)="calculate()">{{selectedCalculation.name}}</button>
+</form>
+
+<calculation-history></calculation-history>

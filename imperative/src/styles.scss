@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import './styles/angular-chicago-theme';
+
+// Import the Roboto font from Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
