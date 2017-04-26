@@ -1,10 +1,12 @@
 <h5>Calculation History</h5>
-<ul>
-    <li *ngFor="let calculationEvent of calculationHistory">
-        {{calculationEvent.parameters[0]}}&nbsp;
-        {{calculationEvent.calculation.operator}}&nbsp;
-        {{calculationEvent.parameters[1]}}&nbsp;
-        =&nbsp;
-        {{calculationEvent.calculation.operation(calculationEvent.parameters[0], calculationEvent.parameters[1])}}
-    </li>
-</ul>
+<section class="calculations">
+    <md-card *ngFor="let calculationEvent of calculationHistory">
+        <md-card-content>
+            {{calculationEvent.parameters[0]}}&nbsp;
+            {{calculationEvent.calculation.operator}}&nbsp;
+            {{calculationEvent.parameters[1]}}&nbsp;
+            =&nbsp;
+            {{calculationEvent.calculation.operation(calculationEvent.parameters[0], calculationEvent.parameters[1])}}
+        </md-card-content>
+    </md-card>
+</section>

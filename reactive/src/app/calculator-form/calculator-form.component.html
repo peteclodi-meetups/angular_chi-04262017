@@ -1,0 +1,25 @@
+<md-card>
+    <md-card-title>
+        Calculate!
+    </md-card-title>
+    <md-card-content>
+        <form>
+            <md-input-container>
+                <input type="number" name="value1Input" mdInput [(ngModel)]="value1" (change)="calculationParamChanged()">
+            </md-input-container>
+            <md-input-container>
+                <input type="number" name="value2Input" mdInput [(ngModel)]="value2" (change)="calculationParamChanged()">
+            </md-input-container>
+
+            <md-select [(ngModel)]="selectedCalculation" selected="selectedCalculation" name="calculationSelect" (change)="calculationParamChanged()">
+                <md-option *ngFor="let calculation of calculations" [value]="calculation">
+                    {{calculation.operator}}
+                </md-option>
+            </md-select>
+
+            <hr>
+
+            <div class="result">{{result | async}}</div>
+        </form>
+    </md-card-content>
+</md-card>

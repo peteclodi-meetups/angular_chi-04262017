@@ -5,6 +5,7 @@ import {HttpModule} from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
     MdButtonModule,
+    MdCardModule,
     MdCheckboxModule,
     MdInputModule,
     MdOptionModule,
@@ -16,11 +17,13 @@ import {AppComponent} from './app.component';
 import {CalculationHistoryComponent} from './calculation-history/calculation-history.component';
 import {CalculationHistoryService} from './calculation-history.service';
 import {CalculateService} from './calculate.service';
+import { CalculatorFormComponent } from './calculator-form/calculator-form.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        CalculationHistoryComponent
+        CalculationHistoryComponent,
+        CalculatorFormComponent
     ],
     imports: [
         BrowserModule,
@@ -28,6 +31,7 @@ import {CalculateService} from './calculate.service';
         HttpModule,
         BrowserAnimationsModule,
         MdButtonModule,
+        MdCardModule,
         MdCheckboxModule,
         MdInputModule,
         MdOptionModule,

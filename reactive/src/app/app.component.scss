@@ -1,14 +1,17 @@
-md-input-container {
-    display: block;
-    width: 150px;
-}
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 
-input[type="number"] {
-    text-align: end;
-}
+    margin-top: 15px;
+    width: 100%;
 
-.result {
-    height: 24px;
-    text-align: end;
-    width: 125px;
+    calculator-form {
+        flex-basis: 24%;
+    }
+
+    calculation-history {
+        flex-basis: 74%;
+    }
 }
